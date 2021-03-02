@@ -1,9 +1,8 @@
 import Container from '@/components/atoms/Container'
 import RichText from '@/components/atoms/RichText'
-import Layout from '@/components/common/Layout'
-import {signOut, useSession} from 'next-auth/client'
-import {useRouter} from 'next/router'
-import React, {useEffect} from 'react'
+import { signOut, useSession } from 'next-auth/client'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 
 /**
  * Profile Component
@@ -36,8 +35,7 @@ export default function Profile() {
   }
 
   return (
-    <Layout>
-      <Container>
+    <Container>
         <RichText tag="h1">Profile</RichText>
         {loading ? (
           <p>Loading</p>
@@ -52,6 +50,5 @@ export default function Profile() {
           </>
         )}
       </Container>
-    </Layout>
   )
 }

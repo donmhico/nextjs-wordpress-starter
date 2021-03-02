@@ -1,8 +1,5 @@
-import getPostTypeStaticProps from '@/api/wordpress/_global/getPostTypeStaticProps'
 import Container from '@/components/atoms/Container'
-import Layout from '@/components/common/Layout'
 import getPagePropTypes from '@/functions/getPagePropTypes'
-import Page from './[...slug]'
 
 // Define route post type.
 const postType = 'page'
@@ -15,18 +12,11 @@ const postType = 'page'
  * @param {object} props.post Post data from WordPress.
  * @return {Element}          The HomePage component.
  */
-export default function HomePage({post}) {
-  const {seo, ...postData} = post
-
-  // Display dynamic page data if homepage retrieved from WP.
-  if (postData && Object.keys(postData).length > 0) {
-    return <Page post={post} />
-  }
+export default function HomePage() {
 
   // Display static page content as fallback.
   return (
-    <Layout seo={{...seo}}>
-      <Container>
+    <Container>
         <article>
           <p>
             To display your WordPress homepage dynamically, set your homepage to
@@ -34,18 +24,7 @@ export default function HomePage({post}) {
           </p>
         </article>
       </Container>
-    </Layout>
   )
-}
-
-/**
- * Get post static props.
- *
- * @author WebDevStudios
- * @return {object} Post props.
- */
-export async function getStaticProps() {
-  return await getPostTypeStaticProps({slug: '/'}, postType)
 }
 
 HomePage.propTypes = {
