@@ -1,8 +1,4 @@
 import Container from '@/components/atoms/Container'
-import getPagePropTypes from '@/functions/getPagePropTypes'
-
-// Define route post type.
-const postType = 'page'
 
 /**
  * Render the HomePage component.
@@ -13,20 +9,15 @@ const postType = 'page'
  * @return {Element}          The HomePage component.
  */
 export default function HomePage() {
-
   // Display static page content as fallback.
   return (
     <Container>
-        <article>
-          <p>
-            To display your WordPress homepage dynamically, set your homepage to
-            a static page via the WP dashboard (Settings: Reading Settings).
-          </p>
-        </article>
-      </Container>
+      <article>
+        <p>
+          To display your WordPress homepage dynamically, set your homepage to a
+          static page via the WP dashboard (Settings: Reading Settings).
+        </p>
+      </article>
+    </Container>
   )
-}
-
-HomePage.propTypes = {
-  ...getPagePropTypes(postType)
 }
