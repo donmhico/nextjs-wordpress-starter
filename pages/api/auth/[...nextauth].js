@@ -1,5 +1,5 @@
-import loginUser from '@/api/frontend/wp/user/loginUser'
-import registerUser from '@/api/frontend/wp/user/registerUser'
+import loginUser from '@/wpapi/frontend/wp/user/loginUser'
+import registerUser from '@/wpapi/frontend/wp/user/registerUser'
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
@@ -142,8 +142,8 @@ const options = {
 }
 
 export default (req, res) => {
-  console.log( 'next auth' )
-  console.log( 'req', req )
-  console.log( 'res', res )
+  console.log('next auth')
+  console.log('req', req)
+  console.log('res', res)
   return NextAuth(req, res, options)
 }

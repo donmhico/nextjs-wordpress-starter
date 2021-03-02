@@ -1,4 +1,4 @@
-import {initializeWpApollo} from '@/api/wordpress/connector'
+import {initializeWpApollo} from '@/wpapi/wordpress/connector'
 import mutationRegisterUser from './mutationRegisterUser'
 
 /**

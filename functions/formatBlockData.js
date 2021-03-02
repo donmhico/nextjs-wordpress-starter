@@ -1,4 +1,4 @@
-import getFormById from '@/api/wordpress/gravityForms/getFormById'
+import getFormById from '@/wpapi/wordpress/gravityForms/getFormById'
 
 /**
  * Format and retrieve expanded block data.
